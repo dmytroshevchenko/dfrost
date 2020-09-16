@@ -1,0 +1,107 @@
+section.citation {
+    overflow: hidden;
+    letter-spacing: 0.02em;
+
+    p {
+        margin: 0;
+    }
+
+    .container {
+        color: $black;
+        padding-top: 137px;
+        padding-bottom: 136px;
+        font-size: 29px;
+        line-height: 46px;
+        letter-spacing: 0.02em;
+        em, i {
+            font-family: $font-family-text;
+            font-weight: normal;
+            font-style: italic;
+        }
+    }
+    blockquote {
+        margin-top: 10px;
+
+        p {
+            font-family: $headings-font-family;
+            font-size: $font-size-micro;
+            line-height: 14px;
+            letter-spacing: 0.12em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        .container {
+            font-size: 45px;
+            line-height: 69px;
+        }
+        blockquote {
+            p {
+                font-size: 12px;
+                line-height: 23px;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .container {
+            // first citation, the second is different padding :(
+            padding: 210px 0 185px;
+        }
+        blockquote {
+            margin-top: 4px;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .container {
+            padding: 140px 0 114px;
+            font-size: 45px;
+            line-height: 69px;
+        }
+        p {
+            max-width: 760px;
+        }
+        blockquote {
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .container {
+            padding: 220px 0 189px;
+            font-size: 65px;
+            line-height: 80px;
+        }
+        p {
+            max-width: 1140px;
+        }
+
+        blockquote {
+            margin-top: 21px;
+
+            p {
+                font-size: 17px;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xxl) {
+        .container {
+            padding: 261px 0;
+            font-size: 80px;
+            line-height: 100px;
+            p {
+                max-width: 1420px;
+            }
+        }
+
+        blockquote {
+            margin-bottom: 56px;
+        }
+    }
+}

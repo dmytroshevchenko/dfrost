@@ -1,0 +1,145 @@
+// @meth = desktop first
+section.latest-works {
+    padding-top: 7px;
+
+    .btn {
+        min-width: 194px;
+    }
+
+    .container {
+        padding-top: 0;
+        padding-bottom: 0;
+        color: $black;
+    }
+    figure {
+        margin: 0;
+    }
+    .works-grid {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 25px;
+    }
+    .work {
+        // !!! no padding, gap instead
+        // padding: 0 15px;
+        // !!! no margin-top, because it BREAKS the section before
+        // margin-top: 60px;
+
+        &:first-child {
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        &:last-child {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        img {
+            width: 100%;
+        }
+        .fvp-youtube {
+            width: 100%;
+            padding-top: 57%;
+            position: relative;
+            iframe {
+                position: absolute;
+                width: 100%;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+            }
+        }
+        .work-header {
+            font-family: $headings-font-family;
+            font-weight: bold;
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            line-height: 1;
+            .work-title {
+                letter-spacing: 2.8px;
+                font-size: 0.8rem;
+            }
+            .work-customer {
+                font-size: $font-size-micro;
+                padding-bottom: 2px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+    @include media-breakpoint-down(xl) {
+        padding-top: 0;
+
+        .work {
+            margin-top: 0;
+
+            .work-header {
+                .work-title {
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(lg) {
+        padding-top: 0;
+
+        .works-grid {
+            gap: 15px 25px;
+        }
+
+        .work {
+            margin-top: 40px;
+            .work-header {
+                .work-title {
+                    letter-spacing: 0.8px;
+                }
+            }
+            .work-customer {
+                padding-bottom: 5px;;
+            }
+        }
+
+        .latest-works-btn {
+            margin: 73px 0 88px;
+        }
+    }
+    @include media-breakpoint-down(md) {
+        .works-grid {
+            display: block;
+        }
+    }
+    @include media-breakpoint-down(xs) {
+        .works-grid {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        .work {
+            margin-top: 32px;
+            .work-header {
+                font-size: 0.875rem;
+                .work-title {
+                    letter-spacing: 0.1px;
+                }
+            }
+        }
+    }
+
+    .latest-works-btn {
+        margin: 90px 0 86px;
+
+        @include media-breakpoint-down(xl) {
+            margin: 70px 0 90px;
+        }
+        @include media-breakpoint-down(md) {
+            margin-bottom: 90px;
+            margin-top: 85px;
+        }
+        @include media-breakpoint-down(xs) {
+            margin-bottom: 57px;
+            margin-top: 30px;
+        }
+    }
+}

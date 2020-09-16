@@ -1,0 +1,38 @@
+.latest-works .work,
+.stories-carousel .story {
+  figure {
+    overflow: hidden;
+
+    img {
+      transition: transform 0.25s ease-out;
+    }
+  }
+
+  @include hover-focus-active {
+    figure img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+// .brands .brand {
+//   @include hover-focus-active {
+//     figure img {
+//       left: 25%;
+//       top: 25%;
+//       animation: spin 2s linear infinite;
+//       transform: none;
+//     }
+//   }
+// }

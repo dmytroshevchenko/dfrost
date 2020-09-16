@@ -1,0 +1,27 @@
+.blinline {
+    line-height: 35px;
+
+    .toAnimate .word .out {
+        padding-right: .1em;
+    }
+
+    @include media-breakpoint-up(sm) {
+        line-height: 35px;
+    }
+
+    @include media-breakpoint-up(md) {
+        line-height: 55px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        line-height: 55px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        line-height: 78px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        line-height: 94px;
+    }
+}

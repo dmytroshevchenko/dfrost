@@ -1,0 +1,10 @@
+section.thin_text {
+	
+
+	.title {
+		font-family: Gotham SSm;
+		text-transform: uppercase;
+		letter-spacing:0.12em;
+		font-size:1.0625em;
+	}
+}

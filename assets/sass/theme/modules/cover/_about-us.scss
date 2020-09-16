@@ -1,0 +1,90 @@
+.about-us {
+    text-align: center;
+
+    .wp-block-group__inner-container {
+        @extend .container;
+    }
+    .wp-block-columns {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 40px 0 30px;
+        // just weird 334px instead of 333px
+        max-width: 334px;
+
+        h3 {
+            margin-bottom: 1rem;
+            font-style: $headings-font-family;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 23px;
+            letter-spacing: 0.12em;
+        }
+        p {
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+        }
+    }
+    .wp-block-column {
+        flex-basis: 100%;
+        flex-grow: 0;
+        margin-bottom: 42px;
+        word-break: break-word;
+        overflow-wrap: break-word;
+
+        &:nth-child(2n), &:not(:first-child) {
+            margin-left: 0 !important;
+        }
+    }
+    @include media-breakpoint-up(sm) {
+    }
+    @include media-breakpoint-up(md) {
+        .wp-block-columns {
+            padding: 40px 0 72px;
+            max-width: 426px;
+
+            h3 {
+                font-size: 17px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 25px;
+            }
+        }
+        .wp-block-column {
+            margin-bottom: 50px;
+            font-size: 16px;
+            line-height: 25px;
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        .wp-block-columns {
+            max-width: 620px;
+        }
+        .wp-block-column {
+            margin-bottom: 51px;
+        }
+    }
+    @include media-breakpoint-up(xl) {
+        .wp-block-columns {
+            flex-direction: row;
+            padding: 148px 0 100px;
+            max-width: 100%;
+
+            p {
+                margin: 0 auto;
+                max-width: 330px;
+            }
+        }
+    }
+    @include media-breakpoint-up(xxl) {
+        .wp-block-columns {
+            padding: 181px 0 119px;
+
+            p {
+                max-width: 520px;
+            }
+        }
+    }
+}

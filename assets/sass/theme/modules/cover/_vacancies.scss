@@ -1,0 +1,54 @@
+section.vacancies{
+	
+
+
+	.vacancies_block{
+
+		margin:20px auto;
+		width:80%;
+
+		.one_vacancy{
+			width:45%;
+			margin-right:9%;
+			margin-bottom:50px;
+			display:inline-block;
+			font-family: "Romain BP Headline";
+			vertical-align:top;
+				width:100%;
+				display:block;
+
+
+			@media screen and (min-width: 1024px) {
+				display:inline-block;
+				width:45%;
+			}
+
+			&:nth-child(2n){
+				margin-right:0;
+			}
+
+			.vacancy_date{
+				font-size:1.125em;
+				padding-bottom:5px;
+			}
+
+			.vacancy_title{
+				font-size:1.75em;
+				padding-bottom:20px;
+				font-family: "Gotham SSm";
+				font-weight:bold;
+				text-transform:uppercase;
+			}
+
+			.vacancy_excerpt{
+				font-size:1.25em;
+				padding-bottom:40px;
+			}
+		}
+
+		.buttons{
+			margin-top:0;
+		}
+
+	}
+}

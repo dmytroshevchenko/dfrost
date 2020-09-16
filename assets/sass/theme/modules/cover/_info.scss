@@ -1,0 +1,390 @@
+section.info {
+    position: relative;
+    background-position: top center;
+    background-color: $black;
+    background-size: cover;
+    background-attachment: fixed;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+    }
+    .container {
+        padding-top: 85px;
+        padding-bottom: 106px;
+    }
+    .heading {
+        ul.flipper-line {
+            margin: 0;
+            padding: 0;
+            padding-left: 90px;
+            height: 55px;
+            overflow: hidden;
+
+            li {
+                display: inline-block;
+                position: absolute;
+                // left: 0;
+                // transform-origin: center center 40px;
+                transition: transform .5s ease-in-out;
+                white-space: nowrap;
+                // opacity: 0;
+
+                &.open {
+                    transform: rotate3d(1, 0, 0, 0deg);
+                    opacity: 1;
+                    transition: none;
+                }
+                &.opening {
+                    transform-origin: top center;
+                    transform: rotate3d(1, 0, 0, 0deg);
+                    // opacity: 1;
+                }
+                &.closing {
+                    transform-origin: bottom center;
+                    transform: rotate3d(1, 0, 0, 90deg);
+                    // opacity: 0;
+                }
+                &.closed {
+                    transform: rotate3d(1, 0, 0, -90deg);
+                    opacity: 0;
+                }
+            }
+        }
+        // ul {
+        //     display: inline-block;
+        //     word-break: break-word;
+        //     margin: 0;
+        //     padding: 0;
+        //     list-style: none;
+
+        //     li {
+        //         display: none;
+        //         //last-child
+        //         &:first-child {
+        //             display: block;
+        //         }
+        //     }
+        // }
+    }
+    .line-1 {
+        margin-bottom: 0;
+    }
+    .line-2, .line-3 {
+        font-size: 36px;
+        line-height: 38px;
+    }
+    .line-3 {
+        // different from design because of animation
+        line-height: 35px;
+    }
+    .first-word {
+        padding-left: 97px;
+    }
+
+    .desc {
+        font-size: 16px;
+        // different from design because of animation
+        line-height: 20px;
+    }
+
+    .buttons {
+        margin-top: 54px;
+    }
+
+    &.large {
+        // <You can> block, somehow it is different from <We do>
+        min-height: 643px;
+
+        .line-2 {
+            line-height: 35px;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        min-height: 745px;
+
+        .container {
+            padding-top: 85px;
+            padding-bottom: 76px;
+        }
+        ul {
+            word-break: normal;
+        }
+        .heading {
+            margin-bottom: 46px;
+
+            ul.flipper-line {
+                margin-bottom: 11px;
+                padding-left: 110px;
+            }
+        }
+        .first-word {
+            padding-left: 118px;
+            &:before {
+                width: 100px;
+                height: 6px;
+            }
+        }
+        .desc {
+            max-width: 540px;
+            font-size: 20px;
+            // different from design because of animation
+            line-height: 26px;
+            letter-spacing: 0.02em;
+        }
+        .line-2, .line-3 {
+            font-size: 55px;
+            line-height: 56px;
+        }
+        .line-3 {
+            line-height: 54px;
+        }
+
+        .buttons {
+            margin-top: 70px;
+        }
+        .line-2:not(.flipper-line) .word:first-child, .first-word, ul.flipper-line {
+            &:before {
+                width: 98px;
+                height: 6px;
+            }
+        }
+
+        &.large {
+            .container {
+                padding-top: 87px;
+                padding-bottom: 85px;
+            }
+            .heading {
+                margin-bottom: 43px;
+            }
+            .line-1 {
+                margin-bottom: 11px;
+                font-size: 28px;
+                line-height: 28px;
+            }
+            .line-2 {
+                line-height: 55px;
+            }
+            .line-2:not(.flipper-line) .word:first-child, .first-word {
+                padding-left: 130px;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        min-height: 604px;
+
+        .container {
+            padding-top: 85px;
+        }
+
+        .heading {
+            margin-bottom: 32px;
+            max-width: 900px;
+
+            ul.flipper-line {
+                margin-bottom: 11px;
+                padding-left: 135px;
+            }
+        }
+        .first-word {
+            padding-left: 133px;
+        }
+        .desc {
+            max-width: 610px;
+        }
+        .buttons {
+            margin-top: 42px;
+        }
+        .line-2:not(.flipper-line) .word:first-child, .first-word, ul.flipper-line {
+            &:before {
+                width: 101px;
+                height: 6px;
+            }
+        }
+
+        &.large {
+            min-height: 569px;
+
+            .container {
+            }
+            .heading {
+                margin-bottom: 30px;
+            }
+            .desc {
+            }
+            .toAnimate .word {
+                margin-right: 0.35em;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .container {
+            padding-top: 88px;
+            padding-bottom: 86px;
+        }
+        .heading {
+            margin-bottom: 48px;
+            max-width: 1000px;
+            letter-spacing: 0.02em;
+
+            ul.flipper-line {
+                margin-bottom: 11px;
+                padding-left: 152px;
+            }
+
+            .toAnimate .word {
+                margin-right: 0.36em;
+            }
+        }
+        .line-2:not(.flipper-line) .word:first-child, .first-word, ul.flipper-line {
+            &:before {
+                width: 110px;
+                height: 6px;
+            }
+        }
+        .line-1 {
+            line-height: 36px;
+            // different from design because of animation
+            letter-spacing: 0;
+        }
+        .line-2 {
+            line-height: 55px;
+        }
+        .line-3 {
+            line-height: 53px;
+        }
+        .first-word {
+            padding-left: 153px;
+
+            &:before {
+                width: 111px;
+            }
+        }
+        .desc {
+            max-width: 662px;
+            font-size: 22px;
+            // different from design because of animation
+            line-height: 29px;
+            letter-spacing: 0;
+
+            .toAnimate .word {
+                margin-right: 0.2572em;
+            }
+        }
+
+        .buttons {
+            margin-top: 70px;
+        }
+        &.large {
+            // <You can> block, somehow it is different from <We do>
+            .container {
+                padding-top: 91px;
+            }
+            .heading {
+                margin-bottom: 50px;
+                max-width: 940px;
+            }
+            .line-1 {
+                margin-bottom: 7px;
+                line-height: 30px;
+                letter-spacing: 0;
+            }
+            .line-2 {
+                line-height: 53px;
+            }
+            .desc {
+                max-width: 650px;
+                letter-spacing: 0;
+            }
+            .line-2:not(.flipper-line) .word:first-child, .first-word {
+                padding-left: 152px;
+            }
+            .buttons {
+                margin-top: 68px;
+            }
+        }
+    }
+    @include media-breakpoint-up(xxl) {
+        min-height: 810px;
+
+        .container {
+            padding-top: 110px;
+            // padding-bottom: 110px;
+        }
+
+        .line-2:not(.flipper-line) .word:first-child, .first-word, ul.flipper-line {
+            padding-left: 192px;
+
+            &:before {
+                width: 140px;
+                height: 6px;
+            }
+        }
+        .heading {
+            max-width: 1280px;
+            margin-bottom: 44px;
+
+            ul.flipper-line {
+                margin-bottom: 13px;
+                padding-left: 192px;
+                height: 70px;
+            }
+        }
+        .line-1 {
+            margin-bottom: 8px;
+            font-size: 35px;
+            line-height: 43px;
+        }
+        .line-2, .line-3 {
+            font-size: 70px;
+            line-height: 70px;
+        }
+        .desc {
+            max-width: 700px;
+            font-size: 25px;
+            // different from design because of animation
+            line-height: 31px;
+            // different from design because of animation
+            letter-spacing: 0;
+        }
+
+        &.large {
+            // <You can> block, somehow it is different from <We do>
+            min-height: 810px;
+
+            .container {
+                padding-top: 120px;
+            }
+            .heading {
+                margin-bottom: 40px;
+                max-width: 1230px;
+            }
+            .line-1 {
+                font-size: 35px;
+                line-height: 43px;
+            }
+            .line-2 {
+                line-height: 70px;
+            }
+            .line-2:not(.flipper-line) .word:first-child, .first-word {
+                padding-left: 192px;
+            }
+            .desc {
+                max-width: 667px;
+            }
+            .buttons {
+                margin-top: 68px;
+            }
+        }
+    }
+}

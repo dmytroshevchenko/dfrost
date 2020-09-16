@@ -1,0 +1,142 @@
+section.contact-us {
+    // 1920x1667 = 1.1517696461
+    padding-top: 84px;
+    min-height: 690px;
+    background-color: #909092;
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .line-1 {
+        margin-bottom: 0;
+    }
+    .line-2 {
+        // different from design because of animation
+        line-height: 34px;
+    }
+    .line-2:not(.flipper-line) .word:first-child, .first-word {
+        // different from design because of animation
+        padding-left: 88px;
+    }
+
+    .container {
+        padding-top: 0;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+
+        .btn {
+            display: block;
+            padding: .875rem;
+            max-width: 200px;
+        }
+        .btn + .btn {
+            margin-top: 24px;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        .line-1 {
+            .word {
+                margin-right: 0.3em;
+            }
+        }
+        .line-2 {
+            line-height: 34px;
+            letter-spacing: 0.02em;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        min-height: 575px;
+        overflow: hidden;
+
+        .line-1 {
+            margin-bottom: 0;;
+            letter-spacing: 0;
+        }
+        .line-2 {
+            line-height: 56px;
+        }
+        .line-2:not(.flipper-line) .word:first-child, section.contact-us .first-word {
+            padding-left: 113px;
+        }
+
+        .buttons {
+            flex-direction: row;
+            align-items: flex-start;
+            margin-top: 50px;
+
+            .btn {
+                min-width: 200px;
+            }
+
+            .btn + .btn {
+                margin-top: 0;
+                margin-left: 26px;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-top: 87px;
+
+        .heading {
+            max-width: 650px;
+            margin-bottom: 52px;
+        }
+
+        .line-1 {
+            line-height: 34px;
+
+            .toAnimate .word {
+                margin-right: 0.3em;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding-top: 92px;
+        min-height: 480px;
+        max-height: 481px;
+
+        .line-1 {
+            line-height: 35px;
+        }
+
+        .line-2:not(.flipper-line) .word:first-child, .first-word {
+            padding-left: 150px;
+        }
+        .buttons {
+            margin-top: 68px;
+        }
+    }
+
+    @include media-breakpoint-up(xxl) {
+        min-height: 510px;
+        padding-top: 87px;
+
+        .heading {
+            max-width: 810px;
+            margin-bottom: 40px;
+        }
+        .line-1 {
+            margin-bottom: 9px;
+            // different from design because of animation
+            line-height: 42px;
+            letter-spacing: 0;
+        }
+        .line-2 {
+            line-height: 70px;
+        }
+        .line-2:not(.flipper-line) .word:first-child, .first-word {
+            padding-left: 194px;
+        }
+        .buttons {
+            margin-top: 0;
+        }
+    }
+}

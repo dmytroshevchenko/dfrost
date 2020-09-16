@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Gotham SSm';
+    src: local('Gotham SSm Bold'), local('GothamSSm-Bold'),
+        url('../fonts/GothamSSm-Bold.woff2') format('woff2'),
+        url('../fonts/GothamSSm-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham SSm';
+    src: local('Gotham SSm Medium'), local('GothamSSm-Medium'),
+        url('../fonts/GothamSSm-Medium.woff2') format('woff2'),
+        url('../fonts/GothamSSm-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Romain BP Headline';
+    src: local('RomainBPHeadlineBold'),
+        url('../fonts/RomainBPHeadlineBold.woff2') format('woff2'),
+        url('../fonts/RomainBPHeadlineBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Romain BP Text';
+    src: local('RomainBPTextRegular'),
+        url('../fonts/RomainBPTextRegular.woff2') format('woff2'),
+        url('../fonts/RomainBPTextRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Romain BP Text';
+    src: local('RomainBPTextRegular-Italic'),
+        url('../fonts/RomainBPTextRegular-Italic.woff2') format('woff2'),
+        url('../fonts/RomainBPTextRegular-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Romain BP Headline';
+    src: local('RomainBPHeadlineRegular'),
+        url('../fonts/RomainBPHeadlineRegular.woff2') format('woff2'),
+        url('../fonts/RomainBPHeadlineRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

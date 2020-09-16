@@ -1,0 +1,290 @@
+section.stories {
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 78px;
+        padding-bottom: 78px;
+        color: $black;
+
+        figure {
+            margin: 0;
+        }
+        .stories-header {
+            // first
+            order: 1;
+            margin-bottom: 40px;
+        }
+        .heading {
+            margin-bottom: 3px;
+        }
+        .line-1 {
+            margin-bottom: 1px;
+            letter-spacing: 0.48px;
+        }
+        .line-2 {
+            font-size: 1.5rem;
+            letter-spacing: 0.6px;
+        }
+        .line-2:not(.flipper-line) .word:first-child {
+            padding-left: 92px;
+
+            &:before {
+                background: $black;
+                height: 3px;
+            }
+        }
+        .stories-footer {
+            // second
+            order: 3;
+            padding-top: 28px;
+            .description {
+                margin-bottom: 20px;
+                max-width: 300px;
+                // different from design because of animation
+                line-height: 19px;
+            }
+        }
+        .stories-carousel {
+            // third
+            order: 2;
+            margin-bottom: 32px;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 2;
+
+            .story-header {
+                margin-top: 8px;
+                font-family: $font-family-sans-serif;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 0.75rem;
+                .story-title {
+                    padding-right: 30px;
+                    line-height: 1.17;
+                    letter-spacing: 1.44px;
+                }
+                .story-type {
+                    font-size: $font-size-micro;
+                    letter-spacing: 1.14px;
+                }
+            }
+            .owl-nav {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 12px;
+                button i {
+                    font-size: 29px;
+                }
+            }
+            .owl-dots {
+                display: flex;
+                justify-content: center;
+                z-index: 3;
+                margin: -21px 40px 0;
+                .owl-dot {
+                    background: $black !important;
+                    width: 5px;
+                    height: 5px;
+                    margin: 0 4px;
+                    border-radius: 13px;
+                    opacity: 0.3;
+                    &.active {
+                        opacity: 1;
+                    }
+                }
+            }
+            .owl-stage-outer {
+                margin-right: -21px;
+            }
+        }
+        @include media-breakpoint-up(sm) {
+        }
+        @include media-breakpoint-up(md) {
+            padding: 119px 0;
+
+            .stories-header {
+                margin-bottom: 40px;
+            }
+            .heading {
+                max-width: 400px;
+                margin-bottom: 6px;
+            }
+            .line-1 {
+                font-size: 1.125rem;
+                letter-spacing: 0.45px;
+            }
+            .line-2 {
+                font-size: 30px;
+                letter-spacing: 0.75px;
+            }
+            .line-2:not(.flipper-line) .word:first-child {
+                padding-left: 92px;
+                &:before {
+                    background: $black;
+                    width: 83px;
+                }
+            }
+            .stories-carousel {
+                .story-header {
+                    margin-top: 16px;
+                    font-size: 17px;
+                }
+            }            
+            .stories-footer {
+                padding-top: 26px;
+
+                .description {
+                    max-width: 420px;
+                    font-size: 20px;
+                    line-height: 26px;
+                }
+                .stories-btn {
+                    margin-top: 35px;
+                    margin-bottom: 0;
+                }
+            }
+            .owl-stage-outer {
+                margin-right: 0;
+            }
+        }
+        @include media-breakpoint-up(lg) {
+            // the same as default
+        }
+        @include media-breakpoint-up(xl) {
+            display: grid;
+            grid-template-columns: 66.66667% auto;
+            grid-template-rows: auto;
+            .stories-header {
+                padding-left: 20px;
+                margin-top: 0;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                grid-column-start: 2;
+                grid-column-end: 3;
+            }
+            .line-1 {
+                margin-top: -3;
+                margin-bottom: 0;
+                font-size: 19px;
+                // different from design because of animation
+                line-height: 24px;
+                letter-spacing: 0;
+            }
+            .line-2 {
+                margin-bottom: 10px;
+                font-size: 30px;
+                line-height: 30px;
+                letter-spacing: 0.75px;
+            }
+            .stories-footer {
+                margin-top: -64px;
+                padding-left: 20px;
+                grid-row-start: 2;
+                grid-row-end: 3;
+                grid-column-start: 2;
+                grid-column-end: 3;
+                p {
+                    font-size: 1rem;
+                }
+                .stories-btn {
+                    margin-top: 20px;
+                    margin-bottom: 111px;
+                }
+                .description {
+                    font-size: 16px;
+                    line-height: 20px;
+                    margin-bottom: 39px;
+                }
+            }
+            .stories-carousel {
+                padding-right: 15px;
+            }
+        }
+        @include media-breakpoint-up(xxl) {
+            grid-template-rows: 149px auto;
+
+            .heading {
+                padding-top: 1px;
+            }
+            .line-1 {
+                margin-bottom: 6px;
+                font-size: 22px;
+                line-height: 22px;
+                letter-spacing: 0.55px;
+
+                .word {
+                    overflow: visible;
+                }
+            }
+            .line-2 {
+                margin-bottom: 32px;
+                font-size: 35px;
+                // different from design because of animation
+                line-height: 37px;
+                letter-spacing: 0.025em;
+            }
+            .line-2:not(.flipper-line) .word:first-child, .first-word {
+                padding-left: 121px;
+
+                &:before {
+                    width: 91px;
+                }
+            }
+            .stories-header {
+                margin-bottom: 0px;
+                padding-left: 20px
+            }
+            .stories-footer {
+                margin-top: 0px;
+                padding-top: 28px;
+                padding-left: 20px;
+
+                .description {
+                    max-width: 430px;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                .stories-btn {
+                    margin: 40px 0 0;
+                }
+            }
+            .stories-carousel {
+                .owl-nav {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-up(xl) {
+        min-height: 100vh;
+    }
+}
+
+.owl-item{
+    &.sliding:before {
+        position: absolute;
+        content: ' ';
+        bottom: 0;
+        // left: 0;
+        // right: 0;
+        width: 100%;
+        background-color: $white;
+        overflow: hidden;
+        height: 100%;
+        transition: all .5s ease;
+    }
+    &.sliding.sliding-right:before {
+        left: 0;
+        right: auto;
+        transform-origin: right;
+    }
+    &.sliding.sliding-left:before {
+        left: auto;
+        right: 0;
+        transform-origin: left;
+    }
+    &.sliding.slided:before {
+        width: 0;
+    }
+}

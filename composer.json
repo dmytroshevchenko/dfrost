@@ -1,0 +1,10 @@
+{
+    "name": "viarise/understrap-dfrost",
+    "description": "DFrost Child Theme for UnderStrap Theme Framework",
+    "type": "library",
+    "license": "GPL-2.0",
+    "minimum-stability": "stable",
+    "require": {},
+    "keywords": ["wordpress","theme","bootstrap"],
+    "homepage": "https://gitlab.vi-arise.com/dfrost/dfrost-homepage"
+}

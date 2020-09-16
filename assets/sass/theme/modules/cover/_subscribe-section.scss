@@ -1,0 +1,102 @@
+// scrolling text https://colibriwp.com/blog/scrolling-text/
+@keyframes marquee_sm {
+  0% { left: 0; }
+  100% { left: -200%; }
+}
+@keyframes marquee_md {
+    0% { left: 0; }
+    100% { left: -150%; }
+}
+@keyframes marquee_lg {
+    0% { left: 0; }
+    100% { left: -100%; }
+}
+  
+section.subscribe {
+    overflow: hidden;
+    position: relative;
+
+    .offside {
+        height: 120px;
+        font-size: 36px;
+        line-height: 130px;
+        letter-spacing: 0.02em;
+        color: $white;
+        text-transform: uppercase;
+        background-color: $blue;
+
+        ul {
+            display: block;
+            position: absolute; 
+            margin: 0;
+            padding: 0 21px;
+            width: 400%;
+            list-style: none;
+
+            overflow: hidden;
+            animation: marquee_sm 5s linear infinite;
+        }
+        li {
+            display: block;
+            float: left;
+            width: 50%;
+            // margin-right: 2em;
+            white-space: nowrap;
+
+            @include hover-focus-active {
+                animation-play-state: paused;
+            }
+        }
+    }
+    .form {
+        margin: 37px auto 0;
+        max-width: 250px;
+    }
+
+    @include media-breakpoint-up(md) {
+        .offside {
+            height: 140px;
+            font-size: 50px;
+            line-height: 150px;
+
+            ul {
+                width: 300%;
+                animation: marquee_md 5s linear infinite;
+            }
+            li {
+                width: 50%;
+            }
+        }
+        .form {
+            margin: 25px auto 0;
+        }
+    }
+    @include media-breakpoint-up(xl) {
+        .offside {
+            height: 210px;
+            font-size: 65px;
+            line-height: 220px;
+
+            ul {
+                width: 200%;
+                animation: marquee_lg 5s linear infinite;
+            }
+            li {
+                width: 50%;
+            }
+        }
+    }
+    @include media-breakpoint-up(xxl) {
+        .offside {
+            height: 210px;
+            font-size: 80px;
+            line-height: 234px;
+
+            ul {
+                // left: -42%;
+                // width: 3350px;
+            }
+        }
+    }
+}
+

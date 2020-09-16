@@ -1,0 +1,110 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder. 
+// Just copy a variable from /sass/bootstrap/_variables.scss, paste it here and edit the value.
+// As example you find one of the most important Bootstrap variable below: $brand-primary.
+// Thats the ugly Bootstrap blue used for all the links, primary buttons etc.
+// Just add your color code here, compile the theme.scss file to change this color everywhere
+
+
+//
+// Color system
+//
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e6e6e6; // footer { .social-icons }
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #a6a6a6; // footer { .navbar-nav, .subscribe input.form-control }
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$blue: #0000ff; // .subscribe
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 425px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1440px,
+  xxl: 1920px
+);
+
+$container-max-widths: (
+  sm: 333px,
+  md: 654px,
+  lg: 910px,
+  xl: 1314px,
+  xxl: 1650px
+);
+
+$primary: $black;
+$secondary: $white;
+
+$enable-responsive-font-sizes: true;
+$rfs-factor: 150;
+
+$font-family-sans-serif: "Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-base: "Romain BP Headline", "Times New Roman", Times, serif;
+$font-family-text: "Romain BP Text";
+$headings-font-family: $font-family-sans-serif;
+$input-btn-font-family: $font-family-sans-serif;
+
+$font-size-base: 1rem;
+$font-size-micro: 0.6rem;
+$small-font-size: 0.875rem;
+
+// @todo remove if possible
+$font-size-smaller: 0.8125rem;
+
+$h1-font-size:                $font-size-base * 2.25; // 36px
+// $h2-font-size:                $font-size-base * 2 !default;
+// $h3-font-size:                $font-size-base * 1.75 !default;
+// $h4-font-size:                $font-size-base * 1.5 !default;
+// $h5-font-size:                $font-size-base * 1.25 !default;
+// $h6-font-size:                $font-size-base !default;
+
+$border-radius:               0;
+$border-radius-lg:            0;
+$border-radius-sm:            0;
+
+$border-width:                2px;
+
+$input-btn-padding-y:         0.875rem;
+$btn-padding-x:               3.25rem;
+$input-btn-font-family:       $font-family-sans-serif;
+$input-btn-font-size:         $font-size-micro;
+// $input-btn-line-height:       $line-height-base !default;
+$input-border-color:          $black;
+
+$input-font-weight:           bold;
+$btn-font-weight:             $input-font-weight;
+
+// navigation
+$header-height: 70px;
+
+$hamburger-padding-x           : 15px !default;
+$hamburger-padding-y           : 15px !default;
+$hamburger-layer-width         : 25px;
+$hamburger-layer-height        : 2px;
+$hamburger-layer-spacing       : 4px;
+$hamburger-layer-color         : $white;
+$hamburger-layer-border-radius : 0;
+$hamburger-hover-opacity       : 0.7 !default;
+$hamburger-active-layer-color  : $hamburger-layer-color !default;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
+
+// To use CSS filters as the hover effect instead of opacity,
+// set $hamburger-hover-use-filter as true and
+// change the value of $hamburger-hover-filter accordingly.
+$hamburger-hover-use-filter   : false !default;
+$hamburger-hover-filter       : opacity(50%) !default;
+$hamburger-active-hover-filter: $hamburger-hover-filter !default;
+
+// Types (Remove or comment out what you don’t need)
+$hamburger-types: (
+    elastic
+);

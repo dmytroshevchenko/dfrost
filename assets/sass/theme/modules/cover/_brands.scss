@@ -1,0 +1,151 @@
+section.brands {
+    figure {
+        margin: 0;
+        min-height: 90px;
+    }
+    .container {
+        padding-top: 0;
+        padding-bottom: 0;
+        color: $black;
+    }
+    .brands-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 147px 0 126px;
+    }
+    .heading {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-bottom: 8px;
+    }
+    .line-1 {
+        margin-bottom: 2px;
+        // different from design because of animation
+        line-height: 19px;
+        letter-spacing: 0;
+    }
+    .line-2 {
+        // font-size: 36px;
+        line-height: 35px;
+        letter-spacing: 0.025em;
+    }
+    .line-2:not(.flipper-line) .word:first-child {
+        padding-left: 0;
+        &:before {
+            content: none;
+        }
+    }
+
+    .brand {
+        text-align: center;
+
+        figure {
+            position: relative;
+        }
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transition: opacity 2s ease-in-out;
+            transform: translate(-50%, -50%);
+        }
+        img.top {
+            z-index: 2;
+        }
+        img.bottom {
+            z-index: 1;
+        }
+        img.transparent {
+            opacity: 0;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .brands-grid {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            padding: 206px 0 134px;
+        }
+        .heading {
+            grid-column-end: 6;
+        }
+        .line-1 {
+            font-size: 22px;
+            line-height: 32px;
+        }
+        .line-2 {
+            margin-bottom: 20px;
+            font-size: 50px;
+            // different from design because of animation
+            line-height: 48px;
+        }
+        figure {
+            min-height: 100px;
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        .brands-grid {
+            padding: 173px 0;
+        }
+        figure {
+            min-height: 155px;
+        }
+        .heading {
+            margin: 0;
+        }
+        .line-1 {
+            margin-bottom: 0;
+            font-size: 28px;
+            // different from design because of animation
+            line-height: 34px;
+        }
+        .line-2 {
+            margin-bottom: 0;
+            max-width: 680px;
+            font-size: 55px;
+            // different from design because of animation
+            line-height: 55px;
+        }
+    }
+    @include media-breakpoint-up(xl) {
+        .brands-grid {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            padding: 204px 0;
+        }
+        .heading {
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            margin-bottom: 0;
+        }
+        .line-1 {
+            margin-bottom: 2px;
+            line-height: 50px;
+        }
+        .line-2 {
+            max-width: none;
+            font-size: 50px;
+            line-height: 54px;
+            letter-spacing: 0.05em;
+        }
+    }
+    @include media-breakpoint-up(xxl) {
+        .brands-grid {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            padding: 190px 0 195px;
+        }
+        .heading {
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .line-1 {
+            font-size: 35px;
+            // different from design because of animation
+            letter-spacing: 0;
+        }
+        .line-2 {
+            font-size: 70px;
+            line-height: 70px;
+        }
+    }
+}

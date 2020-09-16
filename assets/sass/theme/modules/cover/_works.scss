@@ -1,0 +1,206 @@
+.all_works{
+	margin-bottom:40px;
+
+
+	.container{
+		padding:0;
+		position:relative;
+
+		font-family: "Gotham SSm";
+		color:#000000;
+	}
+
+	.title_cats{
+		text-align:center;
+		margin:30px 0;
+		font-size:1.0625em;
+
+		.one_title_cat{
+			padding: 30px;
+			display:inline-block;
+			cursor:pointer;
+
+			&:hover{
+				opacity:.5;
+			}
+		}
+	}
+
+	.clients_list, .cats_list{
+		text-align:center;
+		background-color:#000000;
+		padding:120px;
+		font-size:1.0625em;
+		text-transform: uppercase;
+		position:absolute;
+		top:0;
+		width:100%;
+		z-index:10;
+		display:none;
+
+		.close_button {
+			display:inline-block;
+			position:absolute;
+			top:60px;
+			right:60px;
+			color:#ffffff;
+		}
+
+		.one_cat{
+			display:inline;
+			padding:20px;
+
+			a{
+				color:#c1c1c1c1;
+
+				&:hover{
+					opacity:#ffffff;
+				}
+			}
+		}
+	}
+	
+	.masonry_grid{
+		margin:40px auto;
+
+		.one-work{
+			margin-bottom: 40px;
+			width:530px;
+
+
+			.one-work-image{
+				width:100%;
+				background-repeat:no-repeat;
+				background-size:cover;
+				background-position:center;
+
+				position:relative;
+
+				-webkit-transition: all 0.4s ease-out 0s;
+				-moz-transition: all 0.4s ease-out 0s;
+				-o-transition: all 0.4s ease-out 0s;
+				transition: all 0.4s ease-out 0s;
+
+
+				button{
+					background-color:transparent;
+					padding:15px 40px;
+					width: 180px;
+					position:absolute;
+					top:45%;
+					margin:0 auto;
+					left:0;
+					right:0;
+					z-index:10;
+					display:none;
+
+				}
+
+				&:hover button{
+					display:inline-block;
+				}
+
+
+				&:hover::before{
+					content:'';
+					position:absolute;
+					top:0;
+					left:0;
+					width:100%;
+					height:100%;
+					z-index:5;
+					background-color:rgba(0, 0, 0, 0.5);
+				}
+			}
+
+			&:nth-child(4n+1) .one-work-image{
+				height:306px;
+			}
+
+			&:nth-child(4n+2) .one-work-image{
+				height:652px;
+			}
+
+			&:nth-child(4n+3) .one-work-image{
+				height:775px;
+			}
+			
+			&:nth-child(4n) .one-work-image{
+				height:775px;
+			}
+
+			.work-content{
+
+				.work-title{
+					display:flex;
+					align-items:flex-start;
+					flex-direction:row;
+					justify-content: flex-start;
+					margin:10px auto 20px;
+
+					text-transform: uppercase;
+					font-weight:bold;
+
+					.work-title-title{
+						font-size:1.0625em;
+						width:70%;
+					}
+
+					.work-cat{
+						font-size:0.6em;
+						text-align:right;
+						width:30%;
+					}
+				}
+
+				.work-description{
+					font-family: "Romain BP Headline";
+				}
+
+				.work-links{
+					display:flex;
+					align-items:flex-start;
+					flex-direction:row;
+					justify-content: flex-start;
+					text-transform:uppercase;
+					font-size:0.6em;
+					font-weight:bold;
+
+					.download_link{
+						width:30%;
+						display:block;
+
+						&::before{
+							font-size:1.667em;
+							vertical-align:middle;
+							margin-right:4px;
+						}
+					}
+
+					.site_link{
+						border-bottom:2px solid #000000;
+						padding-right:5px;
+
+						-webkit-transition: all 0.4s ease-out 0s;
+						-moz-transition: all 0.4s ease-out 0s;
+						-o-transition: all 0.4s ease-out 0s;
+						transition: all 0.4s ease-out 0s;
+
+						&:hover{
+							text-decoration:none;
+							border-bottom:none;
+							padding-right:15px;
+						}
+					}
+
+				}
+			}
+
+		}
+
+		.understrap-read-more-link{
+			display:none;
+		}
+		
+	}
+}

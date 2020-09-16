@@ -1,0 +1,114 @@
+#magnifying-glass-container {
+    z-index: 9999999 !important;
+    overflow: hidden !important;
+    border-radius: 50% !important;
+    background-color: #fff !important;
+    pointer-events: none;
+}
+
+@keyframes anime {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@-webkit-keyframes anime {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@-moz-keyframes anime {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@-o-keyframes anime {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+body:hover #magnifying-glass-container {
+    animation: anime 0.3s alternate ease-in;
+}
+
+#magnifying-glass-container,
+#magnifying-glass-container img {
+    top: 0;
+    left: 0;
+    position: absolute !important;
+}
+div#magnifying-glass-container::after {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.2;
+    background-color: #fff;
+}
+
+.MenuMagnifyingGlass {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.MenuMagnifyingGlass,
+.MenuMagnifyingGlass > .scale-wrapper {
+    border-radius: 50%;
+    overflow: hidden;
+    transform-origin: center;
+}
+
+.MenuMagnifyingGlass > .scale-wrapper {
+    position: relative;
+    transition-property: width, height, top, left;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.MenuMagnifyingGlass > .scale-wrapper > .canvas {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.MenuMagnifyingGlass > .scale-wrapper > .link .TextAnimator {
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(calc(-50% - var(--linkOffsetX)), calc(-50% - var(--linkOffsetY)), 0);
+    will-change: transfrom;
+}
+
+.MenuMagnifyingGlass > .scale-wrapper > .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.2;
+    background-color: #fff;
+}
+.fullscreen-hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(1);
+}
